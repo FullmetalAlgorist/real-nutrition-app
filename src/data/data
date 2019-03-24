@@ -1,0 +1,53 @@
+ loadData(){
+
+          const data = {
+            spring: [
+'Apples','Apricots','Asparagus','Avocados','Bananas','Broccoli','Cabbage',
+'Carrots','Celery','Collard Greens','Garlic','Kale','Kiwifruit','Lemons',
+'Lettuce','Limes','Mushrooms','Onions','Peas','Pineapples','Radishes',
+'Rhubarb','Spinach','Strawberries','Swiss Chard','Turnips'],
+            summer: ['Apples',
+'Apricots',
+'Avocados',
+'Bananas',
+'Beets',
+'Bell Peppers',
+'Blackberries',
+'Blueberries',
+'Cantaloupe',
+'Carrots',
+'Celery',
+'Cherries',
+'Corn',
+'Cucumbers',
+'Eggplant',
+'Garlic',
+'Green Beans',
+'Honeydew Melon',
+'Lemons',
+'Lima Beans',
+'Limes',
+'Mangos',
+'Okra',
+'Peaches',
+'Plums',
+'Raspberries',
+'Strawberries',
+'Summer Squash',
+'Tomatillos',
+'Tomatoes',
+'Watermelon',
+'Zucchini'],
+            fall: ['Apples','Bananas','Beets','Bell Peppers','Broccoli','Brussels Sprouts',
+'Cabbage','Carrots','Cauliflower','Celery','Collard Greens','Cranberries','Garlic','Ginger',
+'Grapes','Green Beans','Kale','Kiwifruit','Lemons','Lettuce','Limes','Mangos','Mushrooms',
+'Onions','Parsnips','Pears','Peas','Pineapples','Potatoes','Pumpkins','Radishes','Raspberries',
+'Rutabagas','Spinach','Sweet Potatoes & Yams','Swiss Chard','Turnips','Winter Squash'],
+            winter: ['Apples','Avocados','Bananas','Beets','Brussels Sprouts','Cabbage',
+'Carrots','Celery','Collard Greens','Grapefruit','Kale','Kiwifruit','Leeks','Lemons','Limes',
+'Onions','Oranges','Parsnips','Pears','Pineapples','Potatoes','Pumpkins','Rutabagas','Sweet Potatoes & Yams',
+'Swiss Chard','Turnips','Winter Squash']
+          }
+          this.$http.put('data.json', data);
+    }
+
