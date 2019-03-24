@@ -1,6 +1,6 @@
 <template>
  <div class="summer scrolling-wrapper">
-    <app-menu></app-menu>
+   <app-menu></app-menu>
 
 <b-container fluid class="grid ">
   <b-row>

@@ -1,6 +1,6 @@
 <template>
  <div class="spring">
-    <app-menu></app-menu>
+   <app-menu></app-menu>
    <!-- <h1>{{ current }}</h1> -->
    <!-- <div class="scrolling-wrapper" ref="scrollDiv"> -->
   <!-- <div  class="card" :key="ingredient.id" v-for="ingredient in ingredients"> <ingredient  :specific="ingredient" >1</ingredient></div> -->
