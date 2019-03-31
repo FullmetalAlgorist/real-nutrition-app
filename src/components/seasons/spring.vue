@@ -1,26 +1,14 @@
 <template>
  <div class="spring">
    <app-menu></app-menu>
-   <!-- <h1>{{ current }}</h1> -->
-   <!-- <div class="scrolling-wrapper" ref="scrollDiv"> -->
-  <!-- <div  class="card" :key="ingredient.id" v-for="ingredient in ingredients"> <ingredient  :specific="ingredient" >1</ingredient></div> -->
-
-<!-- </div> -->
 <grid
   :items="ingredients"
-  @click="update"
 :cellWidth="cellWidth"
 :cellHeight="cellHeight"
   class="grid"
   :center="cent"
   >
-  <!-- :height="100"
-  :width="100" goes in grid element:
-  :draggable="true"
-  :sortable="true"
-  -->
   <template  slot="cell" scope="props">
-    <!-- <div>{{props.item}}</div> -->
    <ingredient  :specific="props.item"></ingredient>
 
   </template>
@@ -29,18 +17,10 @@
 </template>
 <script>
 export default {
-  created() {
-    //window.addEventListener('mousewheel', this.handleScroll);
-  },
-    destroyed: function () {
-       // window.removeEventListener('mousewheel', this.handleScroll);
-    },
+
  data () {
   return {
     items: [
-      'a',
-      'b',
-      'c'
     ],
     cellWidth: 220,
     cellHeight: 275,
@@ -53,24 +33,11 @@ export default {
       return this.$store.getters.getSpring;
     },
     current(){
-
       return '';
     }
   },
   methods: {
-    update(){
-     // this.selected = item;
-      console.log('hi');
-    }
-//     ,
-//     handleScroll(e){
-//       this.delta = Math.max(-1,Math.min(1,(e.wheelDelta)));
-// this.$refs["scrollDiv"].scrollLeft -= (this.delta*50);
-//       //window.scrollX -= e.wheelDelta*30;
-//       e.preventDefault();
-//       console.log('e:');
-//        console.log(e);
-//     }
+
   }
 }
 </script>

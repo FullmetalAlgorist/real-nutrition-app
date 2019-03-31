@@ -57,8 +57,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .ingredient{
-//  padding: 20px; 
-
 
 }
 .icon {
@@ -75,6 +73,7 @@ width: 200px;
 h6{
   /* display: none; */
    font-weight: bold;
+   font-family: 'Ubuntu', sans-serif;
    text-align: center;
 }
 </style>

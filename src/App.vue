@@ -1,6 +1,7 @@
 <template>
 <div class="app">
- <!-- <overlay></overlay> -->
+  <v-app>
+ <overlay></overlay>
 <router-view></router-view>
 
 
@@ -11,8 +12,9 @@
 <!-- CREDIT ICONS -->
     <!-- <div>Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 		    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 		    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
 
-
+  </v-app>
 </div>
+
 </template>
 <script>
 import { TweenMax } from "gsap"
@@ -61,6 +63,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 //global styles
 .app{
 height: 100%;
@@ -71,10 +74,12 @@ div{
 }
 
 html, body {
+  
   height: 100%;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+
+  font-size: 300%;
 }
 </style>

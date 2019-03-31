@@ -1,13 +1,8 @@
 import Vue from 'vue'
-// import 'bootstrap-css-only/css/bootstrap.min.css'
-// import 'mdbvue/build/css/mdb.css'
 
 import App from './App.vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
-import BootstrapVue from 'bootstrap-vue'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
 import Ingredient from './components/ingredient.vue'
 import Summer from './components/seasons/summer.vue'
 import Fall from './components/seasons/fall.vue'
@@ -17,18 +12,14 @@ import overlayMenu from './components/overlay-menu'
 import Menu from './components/menu.vue'
 import store from './store/store'
 import Grid from 'vue-js-grid'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
 
-library.add(faCoffee)
-Vue.component('font-awesome-icon', FontAwesomeIcon)
-Vue.config.productionTip = false
 
 Vue.use(Grid);
 Vue.use(VueResource);
-Vue.use(BootstrapVue);
 Vue.use(VueRouter);
+Vue.use(Vuetify)
 
 Vue.component('ingredient', Ingredient);
 Vue.component('app-menu', Menu);

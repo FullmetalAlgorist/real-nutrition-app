@@ -1,10 +1,9 @@
 <template>
   <div class="menu">
-  <b-button class="summer btn btn-lg btn-warning" @click="showSummer" >Summer</b-button>
-  <b-button class="fall btn btn-lg btn-danger" @click="showFall">Fall</b-button>
-  <b-button class="winter btn btn-lg btn-info" @click="showWinter">Winter</b-button>
-  <b-button class="spring btn btn-lg  btn-success" @click="showSpring">Spring</b-button>
-
+    <v-btn class="warning" @click="showSummer">Summer</v-btn>
+    <v-btn class="error" @click="showFall">Fall</v-btn>
+    <v-btn class="info" @click="showWinter">Winter</v-btn>
+    <v-btn class="success" @click="showSpring">Spring</v-btn>
   </div>
 </template>
 
@@ -31,6 +30,7 @@ export default {
 .menu{
   background-color: transparent;
   text-align: center;
+  font-family: 'Ubuntu', sans-serif;
 }
 </style>
 

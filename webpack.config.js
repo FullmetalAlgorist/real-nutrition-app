@@ -1,5 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
+const GoogleFontsPlugin = require("google-fonts-webpack-plugin")
 
 module.exports = {
   entry: './src/main.js',
@@ -8,6 +9,14 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'build.js'
   },
+  // plugins: [
+  //   new GoogleFontsPlugin({
+  //     fonts:[
+  //       { family: "Ubuntu" },
+  //       { family: "Roboto", variants: [ "400", "700italic" ] }
+  //     ]
+  //   })
+  // ],
   module: {
     rules: [
       {

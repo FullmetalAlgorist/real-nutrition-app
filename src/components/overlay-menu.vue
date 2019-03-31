@@ -1,29 +1,25 @@
  <template>
  <div class="overlay-menu">
-    
-    <div @click="openMenu" :class="{active: isActive}" class="button_container" id="toggle">
-    <span class="top"></span>
-    <span class="middle"></span>
-    <span class="bottom"></span>
-    </div>
-
+   <div class="button_container" >
+    <v-btn 
+    id="toggle" @click="openMenu" 
+    fab 
+    small
+    flat
+    :class="{active: isActive}">
+      <v-icon large >info</v-icon>
+    </v-btn>
+</div>
     <div class="overlay" :class="{open: isOpen}" id="overlay">
       <nav class="overlay-menu">
-        <!-- <ul>
-          <li @click="openMenu"><nuxt-link  to="/landing">Home</nuxt-link></li>
-          <li @click="openMenu"><nuxt-link to="/about">About</nuxt-link></li>
-          <li><a href="#">Website Design</a></li>
-           <li @click="openMenu"><nuxt-link to="/photography"> Nature Photography</nuxt-link></li>
-          <li @click="openMenu"><nuxt-link to="/insta"> Instagram</nuxt-link></li>
-        
-        </ul> -->
-        <h1>FAQs</h1>
+        <h1>Welcome to the Nutrition App</h1>
+        <h1>Information Page!!</h1>
+        <br>
         <ul>
-          <li>1: wtf hi</li>
-          <li>2: wtf hi</li>
-          <li>3: wtf hi</li>
-          <li>4: wtf hi</li>
-          <li>5: wtf hi</li>
+          <li>Built By: Mariah Vicary</li>
+          <li>Is this all? -where are my location options and such?</li>
+          <li>YES this is all... it's just a stupid little app I made, get over it</li>
+          <div>Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 		    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 		    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
         </ul>
       </nav>
       </div>
@@ -52,12 +48,13 @@ $color-main: #1abc9c;
 $color-active: #FFF;
 $color-link: #FFF;
 
-$button-height: 27px;
-$button-width: 35px;
+$button-height: 22px;
+$button-width: 29px;
 
 .overlay-menu{
   z-index: 20;
    position: absolute;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .container {
@@ -68,11 +65,11 @@ $button-width: 35px;
   top: 40%;
   left: 0;
   margin:  0 auto;
-  font-family: 'Varela Round', sans-serif;
+ 
   
 
   p {
-    font-size: 20px;
+    font-size: 15px;
   }
   
   a {
@@ -107,57 +104,16 @@ $button-width: 35px;
 h1 {
   position: relative;
   text-align: center;
-  font-family: 'Varela Round', serif;
+  //font-family: 'Baloo Chettan', cursive;
 }
 
 .button_container {
-  position: fixed;
-  top: 2.4%;
-  right: 2%;
-  height: $button-height;
-  width: $button-width;
+   position: fixed;
   cursor: pointer;
   z-index: 2 ;
-  transition: opacity .25s ease;
   
   &:hover {
     opacity: .7;
-  }
-  
-  &.active {
-    .top {
-      transform: translateY(11px) translateX(0) rotate(45deg);
-      background: $color-active;
-    }
-    .middle {
-      opacity: 0;
-      background: $color-active;
-    }
-    
-    .bottom {
-      transform: translateY(-11px) translateX(0) rotate(-45deg);
-      background: $color-active;
-    }
-  }
-  
-  span {
-  background: $color-main;
-  border: none;
-  height: 5px;
-  width: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0;
-  transition:  all .35s ease;
-  cursor: pointer;
-    
-    &:nth-of-type(2) {
-      top: 11px;
-    }
-    
-    &:nth-of-type(3) {
-      top: 22px;
-    }
   }
 }
 
@@ -199,8 +155,8 @@ h1 {
     height: 70%;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 50px;
-    font-family: 'Varela Round', serif;
+    font-size: 40px;
+    //font-family: 'Varela Round', serif;
     font-weight: 400;
     text-align: center;
   }
@@ -259,25 +215,5 @@ h1 {
     left: 0;
   }
 }
-//    span {
-//   background: $color-main;
-//   border: none;
-//   height: 5px;
-//   width: 100%;
-//   position: absolute;
-//   top: -35px;
-//   left: 0;
-//   transition:  all .35s ease;
-//   cursor: pointer;
-    
-//     &:nth-of-type(2) {
-//       top: -24px;
-//     }
-    
-//     &:nth-of-type(3) {
-//       top: -13px;
-//     }
-//   }
-// }
 </style>
 
