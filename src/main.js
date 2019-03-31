@@ -17,13 +17,18 @@ import overlayMenu from './components/overlay-menu'
 import Menu from './components/menu.vue'
 import store from './store/store'
 import Grid from 'vue-js-grid'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faCoffee)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.config.productionTip = false
 
 Vue.use(Grid);
 Vue.use(VueResource);
 Vue.use(BootstrapVue);
 Vue.use(VueRouter);
-
-
 
 Vue.component('ingredient', Ingredient);
 Vue.component('app-menu', Menu);

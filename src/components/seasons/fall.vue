@@ -1,49 +1,29 @@
 <template>
- <div class="fall">
-  <app-menu></app-menu>
-   <!-- <h1>{{ current }}</h1> -->
-   <!-- <div class="scrolling-wrapper" ref="scrollDiv"> -->
-  <!-- <div  class="card" :key="ingredient.id" v-for="ingredient in ingredients"> <ingredient  :specific="ingredient" >1</ingredient></div> -->
-
-<!-- </div> -->
-<grid
-
-  :items="ingredients"
-  @click="update"
-cellWidth=150
-cellHeight=180
-  class="grid"
-  >
-  <!-- :height="100"
-  :width="100" goes in grid element:
-  :draggable="true"
-  :sortable="true"
-  -->
-  <template slot="cell" scope="props">
-    <!-- <div>{{props.item}}</div> -->
-   <ingredient :specific="props.item"></ingredient>
-
-  </template>
-</grid>
- </div>
+  <div class="fall">
+    <app-menu></app-menu>
+    <grid
+      :items="ingredients"
+      :cellWidth="cellWidth"
+      :cellHeight="cellHeight"
+      class="grid"
+      :center = "cent"
+      >
+        <template slot="cell" scope="props">
+          <ingredient :specific="props.item"></ingredient>
+        </template>
+    </grid>
+  </div>
 </template>
 <script>
 export default {
-  created() {
-    //window.addEventListener('mousewheel', this.handleScroll);
-  },
-    destroyed: function () {
-       // window.removeEventListener('mousewheel', this.handleScroll);
-    },
  data () {
   return {
     items: [
-      'a',
-      'b',
-      'c'
     ],
-    selected: ''
-
+    selected: '',
+    cellWidth: 220,
+    cellHeight: 275,
+    cent: true
     }
 },
   computed: {
@@ -51,34 +31,20 @@ export default {
       return this.$store.getters.getFall;
     },
     current(){
-
       return '';
     }
   },
   methods: {
-    update(){
-     // this.selected = item;
-      console.log('hi');
-    }
-//     ,
-//     handleScroll(e){
-//       this.delta = Math.max(-1,Math.min(1,(e.wheelDelta)));
-// this.$refs["scrollDiv"].scrollLeft -= (this.delta*50);
-//       //window.scrollX -= e.wheelDelta*30;
-//       e.preventDefault();
-//       console.log('e:');
-//        console.log(e);
-//     }
   }
 }
 </script>
 
 <style scoped>
 .fall{
- background: #333333;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom
-right, #dd1818, #333333);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom right, #f3b3b3, #e96969); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-height: 100%;
+  background: #333333;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom
+  right, #dd1818, #333333);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom right, #f3b3b3, #e96969); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* height: 100%; */
 }
 </style>

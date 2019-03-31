@@ -57,19 +57,20 @@ export default {
 </script>
 <style lang="scss" scoped>
 .ingredient{
-/* padding: 20px; */
+//  padding: 20px; 
+
 
 }
 .icon {
   /* padding: 10px; */
-  margin: 10px;
-  //width: 5em;
-  width: 150px;
-  /* height: 100%; */
+
+  // height: 180px; 
   /* border: solid black;
 border-radius: 100%; */
 /* background-color: white; */
-
+margin: 10px;
+  //width: 5em;
+width: 200px;
 }
 h6{
   /* display: none; */

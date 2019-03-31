@@ -1,6 +1,6 @@
 <template>
 <div class="app">
- <overlay></overlay>
+ <!-- <overlay></overlay> -->
 <router-view></router-view>
 
 
@@ -21,28 +21,12 @@ import Vue from 'vue'
 export default {
 
   mounted() {
-    //const { snaily, globey } = this.$refs
-     //TweenLite.to(snaily, 10, {x: '-=300%', ease:Power1.easeInOut, repeat: -1});
-   //TweenLite.to(globey, 0.4, {top: '100%', y: '-100%', ease:Bounce.easeInOut, delay: 2});
-
  Vue.http.get('data.json').then(response => response.json()).then(data => {
       if (data){
 
         this.$store.dispatch('setSeasons', data);
-      //   this.winter = data.winter;
-      //  this.spring = data.spring;
-      //   this.summer = data.summer;
-      //   this.fall = data.fall;
       }
       })
-// TweenLite.to(boxy, 0.7, {x: '-=200px', y: '-100%', ease:Back.easeInOut, delay: 3});
-// TweenLite.to(boxy, 0.8, {x: '-=200px', y: '-100%', ease:Back.easeInOut, delay: 4.2});
-// TweenLite.to(boxy, 2.5, {top: '50%', y: '-50%', ease:Power0.easeNone, delay: 5});
-// TweenLite.to(boxy, 2.5, {x: '+=400px', ease:Elastic.easeInOut, delay: 7.7});
-//add a callback function on start of tween
-//onUpdate(every frame) and onComplete(once at end) are also available
-//TweenLite.to(boxy, 2.5, {x: '-=400px', rotation: -720, ease: SlowMo.ease.config(0.1, 0.7, false), delay: 10.4, onStart: this.sayHi});
-
   },
   data(){
     return {
@@ -72,8 +56,6 @@ export default {
       return this.currentSeason;
     }
   }
-
-
   }
 
 </script>

@@ -7,21 +7,21 @@
 
 <!-- </div> -->
 <grid
-
   :items="ingredients"
   @click="update"
 :cellWidth="cellWidth"
 :cellHeight="cellHeight"
   class="grid"
+  :center="cent"
   >
   <!-- :height="100"
   :width="100" goes in grid element:
   :draggable="true"
   :sortable="true"
   -->
-  <template slot="cell" scope="props">
+  <template  slot="cell" scope="props">
     <!-- <div>{{props.item}}</div> -->
-   <ingredient :specific="props.item"></ingredient>
+   <ingredient  :specific="props.item"></ingredient>
 
   </template>
 </grid>
@@ -42,10 +42,10 @@ export default {
       'b',
       'c'
     ],
-    cellWidth: 150,
-    cellHeight: 180,
-    selected: ''
-
+    cellWidth: 220,
+    cellHeight: 275,
+    selected: '',
+    cent: true
     }
 },
   computed: {
@@ -84,7 +84,10 @@ background: linear-gradient(to bottom right, #d3fca2, #65bd3c); /* W3C, IE 10+/ 
 // background: #FDFC47;  /* fallback for old browsers */
 // background: -webkit-linear-gradient(to right, #24FE41, #FDFC47);  /* Chrome 10-25, Safari 5.1-6 */
 // background: linear-gradient(to right, #24FE41, #FDFC47); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-height: 100%;
+// height: 100%;
+}
+.in{
+  width: 150px;
 }
 
 
