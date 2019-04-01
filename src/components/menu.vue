@@ -1,6 +1,5 @@
 <template>
   <div class="menu">
-    <div v-if="size" class="no">hi</div>
     <v-btn :class="{ lg : size }" class="warning" @click="showSummer">Summer</v-btn>
     <v-btn :class="{ lg : size }" class="error" @click="showFall">Fall</v-btn>
     <v-btn :class="{ lg : size }" class="info" @click="showWinter">Winter</v-btn>
@@ -56,8 +55,9 @@ export default {
   font-family: 'Ubuntu', sans-serif;
 }
 .lg{
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 90px;
+  margin: 0;
 }
 </style>
 

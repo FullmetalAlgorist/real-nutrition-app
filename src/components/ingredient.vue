@@ -1,7 +1,7 @@
 <template>
 <div class="ingredient">
 
-<img class="icon" :src="currentIcon" @mouseover="color" @mouseleave="color">
+<v-img  class="icon" :class="{xs: xs}"  :src="currentIcon" @mouseover="color" @mouseleave="color"></v-img>
 <h6>{{ name }}</h6>
 </div>
 
@@ -29,6 +29,9 @@ export default {
     }
   },
   computed: {
+    xs(){
+        return this.$vuetify.breakpoint.xsOnly;
+    },
     name(){
       this.images = ['Apples','Apricots','Avocados','Asparagus','Bananas','Beets','Bell Peppers','Blackberries','Blueberries','Broccoli',
       'Brussels Sprouts','Cabbage','Cantaloupe','Carrots','Cauliflower','Celery','Cherries','Cranberries',
@@ -57,7 +60,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .ingredient{
-
+height: 80px;
 }
 .icon {
   /* padding: 10px; */
@@ -66,14 +69,22 @@ export default {
   /* border: solid black;
 border-radius: 100%; */
 /* background-color: white; */
-margin: 10px;
+ margin: 10px;
+//padding: 10px;
   //width: 5em;
 width: 200px;
+}
+.xs{
+width: 70px;
+
 }
 h6{
   /* display: none; */
    font-weight: bold;
    font-family: 'Ubuntu', sans-serif;
    text-align: center;
+   font-size: 30%;
+   margin: 0;
+
 }
 </style>

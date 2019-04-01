@@ -7,6 +7,7 @@
       :cellHeight="cellHeight"
       class="grid"
       :center = "cent"
+
       >
         <template slot="cell" slot-scope="props">
           <ingredient :specific="props.item"></ingredient>
@@ -21,14 +22,32 @@ export default {
     items: [
     ],
     selected: '',
-    cellWidth: 220,
-    cellHeight: 275,
+    // cellWidth: 220,
+    // cellHeight: 275,
     cent: true
     }
 },
   computed: {
     ingredients(){
       return this.$store.getters.getSummer;
+    },
+    cellWidth(){
+      if(this.$vuetify.breakpoint.xsOnly){
+        console.log('hi');
+        return 80;
+      }
+      else{
+        return 220;
+      }
+
+    },
+    cellHeight(){
+      if(this.$vuetify.breakpoint.xsOnly){
+        return (110);
+      }
+      else{
+        return 275;
+      }
     },
     current(){
       return '';
@@ -48,7 +67,10 @@ export default {
 background: #F09819;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to bottom right, #EDDE5D, #F09819);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to bottom right, #EDDE5D, #F09819); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-// height: 100%;
+ height: 100%;
+}
+.grid{
+  margin-top: 20px;
 }
 </style>
 

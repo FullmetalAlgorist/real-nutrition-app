@@ -85,7 +85,6 @@ html, body {
 }
 
 body {
-
   font-size: 300%;
 }
 </style>

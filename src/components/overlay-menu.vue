@@ -1,9 +1,10 @@
  <template>
  <div class="overlay-menu">
-   <div class="button_container" >
-    <v-btn 
-    id="toggle" @click="openMenu" 
-    fab 
+   <div class="button_container"
+   :class="{ xs : size }">
+    <v-btn
+    id="toggle" @click="openMenu"
+    fab
     small
     flat
     :class="{active: isActive}">
@@ -30,7 +31,7 @@
      data(){
         return {
             isActive: false,
-            isOpen: false       
+            isOpen: false
         }
      },
      methods:{
@@ -38,10 +39,15 @@
                 this.isActive = !this.isActive;
                 this.isOpen = !this.isOpen;
              }
-         }
+         },
+          computed: {
+    size(){
+      return this.$vuetify.breakpoint.xsOnly
+    }
+          }
  }
  </script>
- 
+
  <style lang="scss" scoped>
 
 $color-main: #1abc9c;
@@ -65,13 +71,13 @@ $button-width: 29px;
   top: 40%;
   left: 0;
   margin:  0 auto;
- 
-  
+
+
 
   p {
     font-size: 15px;
   }
-  
+
   a {
     display: inline-block;
     position: relative;
@@ -81,7 +87,7 @@ $button-width: 29px;
     font-size: 20px;
     overflow: hidden;
     top: 5px;
-    
+
     &:after {
       content: '';
       position: absolute;
@@ -111,7 +117,7 @@ h1 {
    position: fixed;
   cursor: pointer;
   z-index: 2 ;
-  
+
   &:hover {
     opacity: .7;
   }
@@ -128,17 +134,17 @@ h1 {
   visibility: hidden;
   transition: opacity .35s, visibility .35s, height .35s;
   overflow: hidden;
-  
+
   &.open {
     opacity: .9;
     visibility: visible;
     height: 100%;
     z-index: 1;
-    
+
     li {
       animation: fadeInRight .5s ease forwards;
       animation-delay: .35s;
-      
+
       &:nth-of-type(2) {
         animation-delay: .4s;
       }
@@ -166,8 +172,8 @@ h1 {
     margin: 0 auto;
     display: inline-block;
     position: relative;
-    height: 100%; 
-    
+    height: 100%;
+
     li {
       display: block;
       height: 25%;
@@ -175,20 +181,20 @@ h1 {
       min-height: 50px;
       position: relative;
       opacity: 0;
-      
+
       a {
         display: block;
         position: relative;
         color: $color-link;
         text-decoration: none;
         overflow: hidden;
-        
+
         &:hover:after,
          &:focus:after,
          &:active:after {
            width: 100%;
          }
-        
+
         &:after {
           content: '';
           position: absolute;
@@ -214,6 +220,10 @@ h1 {
     opacity: 1;
     left: 0;
   }
+}
+
+.xs{
+  top: 50px
 }
 </style>
 
