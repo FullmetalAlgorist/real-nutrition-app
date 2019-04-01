@@ -72,7 +72,7 @@ export default {
 
 //global styles
 .app{
-//height: 100%;
+
 }
 
 div{
@@ -85,6 +85,6 @@ html, body {
 }
 
 body {
-  font-size: 300%;
+  font-size: 250%;
 }
 </style>

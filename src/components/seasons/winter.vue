@@ -21,12 +21,27 @@ export default {
     items: [
     ],
     selected: '',
-    cellWidth: 220,
-    cellHeight: 275,
     cent: true
     }
 },
   computed: {
+        cellWidth(){
+      if(this.$vuetify.breakpoint.xsOnly){
+        return 80;
+      }
+      else{
+        return 220;
+      }
+
+    },
+    cellHeight(){
+      if(this.$vuetify.breakpoint.xsOnly){
+        return (120);
+      }
+      else{
+        return 275;
+      }
+    },
     ingredients(){
       return this.$store.getters.getWinter;
     },
@@ -48,9 +63,9 @@ export default {
     background: #E6DADA;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to top right, #274046, #E6DADA);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top right, #274046, #E6DADA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  // height: 100%;
+  height: 100%;
   }
-  .hi{
-    background-color: red;
-  }
+  .grid{
+   margin-top: 12px;
+}
 </style>

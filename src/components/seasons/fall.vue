@@ -7,7 +7,7 @@
       :cellHeight="cellHeight"
       class="grid"
       :center = "cent"
-      >
+      > 
         <template slot="cell" slot-scope="props">
           <ingredient :specific="props.item"></ingredient>
         </template>
@@ -21,12 +21,27 @@ export default {
     items: [
     ],
     selected: '',
-    cellWidth: 220,
-    cellHeight: 275,
     cent: true
     }
 },
   computed: {
+    cellWidth(){
+      if(this.$vuetify.breakpoint.xsOnly){
+        return 80;
+      }
+      else{
+        return 220;
+      }
+
+    },
+    cellHeight(){
+      if(this.$vuetify.breakpoint.xsOnly){
+        return (120);
+      }
+      else{
+        return 275;
+      }
+    },
     ingredients(){
       return this.$store.getters.getFall;
     },
@@ -46,5 +61,8 @@ export default {
   right, #dd1818, #333333);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom right, #f3b3b3, #e96969); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   /* height: 100%; */
+}
+  .grid{
+   margin-top: 12px;
 }
 </style>

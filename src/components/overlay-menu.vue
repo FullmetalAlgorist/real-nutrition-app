@@ -8,11 +8,11 @@
     small
     flat
     :class="{active: isActive}">
-      <v-icon large >info</v-icon>
+      <v-icon large >{{ icon }}</v-icon>
     </v-btn>
 </div>
     <div class="overlay" :class="{open: isOpen}" id="overlay">
-      <nav class="overlay-menu">
+      <nav class="overlay-menu" :class="{ small : size }">
         <h1>Welcome to the Nutrition App</h1>
         <h1>Information Page!!</h1>
         <br>
@@ -31,14 +31,20 @@
      data(){
         return {
             isActive: false,
-            isOpen: false
+            isOpen: false,
+            icon: 'info'
         }
      },
      methods:{
          openMenu(){
                 this.isActive = !this.isActive;
                 this.isOpen = !this.isOpen;
-             }
+                if(this.icon === 'close'){
+                  this.icon = 'info';
+                }
+                else{
+                  this.icon = 'close';}
+          }
          },
           computed: {
     size(){
@@ -223,7 +229,12 @@ h1 {
 }
 
 .xs{
-  top: 50px
+  top: 46px;
+  left: -5px;
+}
+
+.small{
+  font-size: 15px !important;
 }
 </style>
 

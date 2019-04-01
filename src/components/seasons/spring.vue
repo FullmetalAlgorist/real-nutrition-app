@@ -22,13 +22,30 @@ export default {
   return {
     items: [
     ],
-    cellWidth: 220,
-    cellHeight: 275,
+    // cellWidth: 220,
+    // cellHeight: 275,
     selected: '',
     cent: true
     }
 },
   computed: {
+        cellWidth(){
+      if(this.$vuetify.breakpoint.xsOnly){
+        return 80;
+      }
+      else{
+        return 220;
+      }
+
+    },
+    cellHeight(){
+      if(this.$vuetify.breakpoint.xsOnly){
+        return (120);
+      }
+      else{
+        return 275;
+      }
+    },
     ingredients(){
       return this.$store.getters.getSpring;
     },
@@ -51,10 +68,13 @@ background: linear-gradient(to bottom right, #d3fca2, #65bd3c); /* W3C, IE 10+/ 
 // background: #FDFC47;  /* fallback for old browsers */
 // background: -webkit-linear-gradient(to right, #24FE41, #FDFC47);  /* Chrome 10-25, Safari 5.1-6 */
 // background: linear-gradient(to right, #24FE41, #FDFC47); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-// height: 100%;
+height: 100%;
 }
 .in{
   width: 150px;
+}
+  .grid{
+   margin-top: 12px;
 }
 
 

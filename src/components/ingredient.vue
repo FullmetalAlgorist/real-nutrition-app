@@ -2,7 +2,7 @@
 <div class="ingredient">
 
 <v-img  class="icon" :class="{xs: xs}"  :src="currentIcon" @mouseover="color" @mouseleave="color"></v-img>
-<h6>{{ name }}</h6>
+<h6 :class="{fS: xs}">{{ name }}</h6>
 </div>
 
 </template>
@@ -83,8 +83,11 @@ h6{
    font-weight: bold;
    font-family: 'Ubuntu', sans-serif;
    text-align: center;
-   font-size: 30%;
+   
    margin: 0;
 
+}
+.fS{
+  font-size: 30%;
 }
 </style>
