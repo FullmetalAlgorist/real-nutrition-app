@@ -42,7 +42,7 @@ export default {
           if(element.lastIndexOf('s') == element.length-1){
             //get rid of s
              element = element.slice(0, element.length-1)
-             console.log(element);
+
           }
           this.linedIcon = 'src/assets/graphics/produce/'+element+'.png';
           this.icon = 'src/assets/graphics/produce/'+element+'Color.png';
@@ -62,7 +62,7 @@ export default {
 .icon {
   /* padding: 10px; */
 
-  // height: 180px; 
+  // height: 180px;
   /* border: solid black;
 border-radius: 100%; */
 /* background-color: white; */

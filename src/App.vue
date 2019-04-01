@@ -3,8 +3,6 @@
   <v-app>
  <overlay></overlay>
 <router-view></router-view>
-
-
   <!-- <img id="snail" ref="snaily" @click="click"  :src="currentImg"> -->
 
   <!-- <img id="globe" ref="globey" :src="globe"> -->
@@ -14,18 +12,16 @@
 
   </v-app>
 </div>
-
 </template>
 <script>
 import { TweenMax } from "gsap"
 import Vue from 'vue'
 
 export default {
-
   mounted() {
+     console.log(this.$vuetify.breakpoint);
  Vue.http.get('data.json').then(response => response.json()).then(data => {
-      if (data){
-
+     if (data){
         this.$store.dispatch('setSeasons', data);
       }
       })
@@ -56,6 +52,15 @@ export default {
     show(){
       console.log(this.currentSeason);
       return this.currentSeason;
+    },
+     imageHeight () {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs': return '220px'
+        case 'sm': return '400px'
+        case 'md': return '500px'
+        case 'lg': return '600px'
+        case 'xl': return '800px'
+      }
     }
   }
   }
@@ -66,7 +71,7 @@ export default {
 
 //global styles
 .app{
-height: 100%;
+//height: 100%;
 }
 
 div{
@@ -74,8 +79,8 @@ div{
 }
 
 html, body {
-  
-  height: 100%;
+
+  //height: 100%;
 }
 
 body {

@@ -8,7 +8,7 @@
       class = "grid"
       :center = "cent"
       >
-        <template slot="cell" scope="props">
+        <template slot="cell" slot-scope="props">
           <ingredient :specific="props.item"></ingredient>
         </template>
     </grid>
@@ -49,5 +49,8 @@ export default {
     background: -webkit-linear-gradient(to top right, #274046, #E6DADA);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top right, #274046, #E6DADA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   // height: 100%;
+  }
+  .hi{
+    background-color: red;
   }
 </style>
