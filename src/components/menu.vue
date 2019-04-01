@@ -1,9 +1,9 @@
 <template>
   <div class="menu">
-    <v-btn :class="{ lg : size }" class="warning" @click="showSummer">Summer</v-btn>
-    <v-btn :class="{ lg : size }" class="error" @click="showFall">Fall</v-btn>
-    <v-btn :class="{ lg : size }" class="info" @click="showWinter">Winter</v-btn>
-    <v-btn :class="{ lg : size }" class="success" @click="showSpring">Spring</v-btn>
+    <v-btn v-on:mouseover="outline1 = true" @mouseleave="outline1 = false" :outline="outline1" :class="{ lg : size }" class="warning" @click="showSummer">Summer</v-btn>
+    <v-btn v-on:mouseover="outline2 = true" @mouseleave="outline2 = false" :outline="outline2" :class="{ lg : size }" class="error" @click="showFall">Fall</v-btn>
+    <v-btn v-on:mouseover="outline3 = true" @mouseleave="outline3 = false" :outline="outline3" :class="{ lg : size }" class="info" @click="showWinter">Winter</v-btn>
+    <v-btn v-on:mouseover="outline4 = true" @mouseleave="outline4 = false" :outline="outline4" :class="{ lg : size }" class="success" @click="showSpring">Spring</v-btn>
   </div>
 </template>
 
@@ -11,7 +11,11 @@
 export default {
   data(){
     return{
-        break : this.$vuetify.breakpoint.xsOnly
+        break : this.$vuetify.breakpoint.xsOnly,
+        outline1 : false,
+        outline2 : false,
+        outline3 : false,
+        outline4 : false
     }
   },
   methods: {
@@ -27,6 +31,9 @@ export default {
     showSpring(){
       //this.currentSeason = this.spring;
       this.$router.push('/spring');
+    },
+    hover(){
+      this.outline = !this.outline;
     }
   },
   computed: {
@@ -46,9 +53,7 @@ export default {
 }
 </script>
 <style scoped>
-.no{
-  background-color: red;
-}
+
 .menu{
   background-color: transparent;
   text-align: center;
@@ -59,6 +64,7 @@ export default {
   width: 90px;
   margin: 0;
 }
+
 </style>
 
 
