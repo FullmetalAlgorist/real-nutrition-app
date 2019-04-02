@@ -12,7 +12,7 @@
     </v-btn>
 </div>
     <div class="overlay" :class="{open: isOpen}" id="overlay">
-      <nav class="overlay-menu" :class="{ small : size, med : medium }">
+      <nav class="overlay-menu" :class="{small : size,  med : medium, short: height }">
         <h1>Welcome to the Nutrition App</h1>
         <h1>Information Page!!</h1>
         <ul>
@@ -20,14 +20,14 @@
           <!-- <li>Is this all? -where are my location options and such?</li>
           <li>YES this is all... it's just a stupid little app I made, get over it</li> -->
           <br>
-          
+
           <li>What's in season now? brought to you by: <a class="padTop" href="https://snaped.fns.usda.gov/seasonal-produce-guide" title="Freepik">SNAP-Ed Connection:
 U.S. DEPARTMENT OF AGRICULTURE</a>
           </li>
 
           <li class="box"> <div>Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 		    title="Flaticon">www.flaticon.com</a> and are licensed by: <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank"><img class="cc" src="https://i.creativecommons.org/l/by/3.0/us/88x31.png"></a></div></li>
-          
-         
+
+
         </ul>
       </nav>
       </div>
@@ -61,10 +61,13 @@ U.S. DEPARTMENT OF AGRICULTURE</a>
          },
           computed: {
     size(){
-      return this.$vuetify.breakpoint.xsOnly
+        return this.$vuetify.breakpoint.xsOnly
     },
     medium(){
       return this.$vuetify.breakpoint.smOnly
+    },
+    height(){
+      return this.$vuetify.breakpoint.height < 820
     }
           }
  }
@@ -130,6 +133,8 @@ $button-width: 29px;
 }
 
 h1 {
+  padding-left: 5%;
+      padding-right: 5%;
   position: relative;
   text-align: center;
   //font-family: 'Baloo Chettan', cursive;
@@ -164,6 +169,8 @@ h1 {
     z-index: 1;
 
     li {
+      padding-left: 5%;
+      padding-right: 5%;
       animation: fadeInRight .5s ease forwards;
       animation-delay: .35s;
 
@@ -180,7 +187,7 @@ h1 {
   }
   nav {
     position: relative;
-    height: 70%;
+    height: 75%;
     top: 40%;
     transform: translateY(-50%);
     font-size: 40px;
@@ -203,6 +210,8 @@ h1 {
       min-height: 50px;
       position: relative;
       opacity: 0;
+      padding-left: 5%;
+      padding-right: 5%;
 
       a {
         display: block;
@@ -250,7 +259,7 @@ h1 {
 }
 
 .small{
-  font-size: 15px !important;
+  font-size: 25px !important;
 }
 .med{
   font-size: 30px !important;
@@ -259,7 +268,8 @@ h1 {
   width: 150px;
 }
 .name{
-  font-family: 'Baloo Chettan', cursive;
+  font-family: 'Caveat', cursive;
+  font-size: 150%;
   font-weight: bold;
 }
 .box{
@@ -271,6 +281,9 @@ h1 {
 }
 .mU{
   top: 5px;
+}
+.short{
+  font-size: 20px !important;
 }
 </style>
 
