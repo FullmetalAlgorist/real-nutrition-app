@@ -1,9 +1,10 @@
 <template>
   <div class="menu">
-    <v-btn v-on:mouseover="outline1 = true" @mouseleave="outline1 = false" :outline="outline1" :class="{ lg : size }" class="warning" @click="showSummer">Summer</v-btn>
-    <v-btn v-on:mouseover="outline2 = true" @mouseleave="outline2 = false" :outline="outline2" :class="{ lg : size }" class="error" @click="showFall">Fall</v-btn>
-    <v-btn v-on:mouseover="outline3 = true" @mouseleave="outline3 = false" :outline="outline3" :class="{ lg : size }" class="info" @click="showWinter">Winter</v-btn>
-    <v-btn v-on:mouseover="outline4 = true" @mouseleave="outline4 = false" :outline="outline4" :class="{ lg : size }" class="success" @click="showSpring">Spring</v-btn>
+    <v-btn large v-on:mouseover="outline(1)" @mouseleave="outline1 = false" :outline="outline1" :class="{ lg : size, out : outline1 }" class="warning" @click="showSummer">Summer</v-btn>
+    <v-btn large v-on:mouseover="outline(2)" @mouseleave="outline2 = false" :outline="outline2" :class="{ lg : size, out : outline2} " class="error" @click="showFall">Fall</v-btn>
+    <br v-if="tiny">
+    <v-btn large v-on:mouseover="outline(3)" @mouseleave="outline3 = false" :outline="outline3" :class="{ lg : size, out : outline3, tin: tiny }" class="info" @click="showWinter">Winter</v-btn>
+    <v-btn large v-on:mouseover="outline(4)" @mouseleave="outline4 = false" :outline="outline4" :class="{ lg : size, out : outline4, tin: tiny}" class="success" @click="showSpring">Spring</v-btn>
   </div>
 </template>
 
@@ -15,10 +16,24 @@ export default {
         outline1 : false,
         outline2 : false,
         outline3 : false,
-        outline4 : false
+        outline4 : false,
+        tiny : false
     }
   },
   methods: {
+    outline(x){
+      if (x==1){
+        console.log("NO");
+        this.outline1 = true;
+      }if (x==2){
+        this.outline2 = true;
+      }if (x==3){
+        this.outline3 = true;
+      }if (x==4){
+        this.outline4 = true;
+      }
+
+     },
      showSummer(){
       this.$router.push('/summer');
     },
@@ -38,6 +53,13 @@ export default {
   },
   computed: {
     size(){
+      
+      if(this.$vuetify.breakpoint.width < 390){
+        this.tiny = true;
+      }
+      else{
+        this.tiny = false;
+      }
       return this.$vuetify.breakpoint.xsOnly
     },
     imageHeight () {
@@ -64,7 +86,12 @@ export default {
   width: 90px;
   margin: 0;
 }
-
+.out{
+  border-color: black !important;
+  background-color: red;
+}
+.tin{
+   margin-top: 10px;
+   left: -4px;
+}
 </style>
-
-

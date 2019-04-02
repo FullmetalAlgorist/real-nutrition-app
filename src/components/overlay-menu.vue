@@ -1,7 +1,7 @@
  <template>
  <div class="overlay-menu">
    <div class="button_container"
-   :class="{ xs : size }">
+   :class="{ xs : size, mU : moveUp }">
     <v-btn
     id="toggle" @click="openMenu"
     fab
@@ -12,15 +12,22 @@
     </v-btn>
 </div>
     <div class="overlay" :class="{open: isOpen}" id="overlay">
-      <nav class="overlay-menu" :class="{ small : size }">
+      <nav class="overlay-menu" :class="{ small : size, med : medium }">
         <h1>Welcome to the Nutrition App</h1>
         <h1>Information Page!!</h1>
-        <br>
         <ul>
-          <li>Built By: Mariah Vicary</li>
-          <li>Is this all? -where are my location options and such?</li>
-          <li>YES this is all... it's just a stupid little app I made, get over it</li>
-          <div>Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 		    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 		    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+          <li >Built By:<a href="https://en.wikipedia.org/wiki/Mariah" title="Mariah"> <span class="name">Mariah Vicary</span></a></li>
+          <!-- <li>Is this all? -where are my location options and such?</li>
+          <li>YES this is all... it's just a stupid little app I made, get over it</li> -->
+          <br>
+          
+          <li>What's in season now? brought to you by: <a class="padTop" href="https://snaped.fns.usda.gov/seasonal-produce-guide" title="Freepik">SNAP-Ed Connection:
+U.S. DEPARTMENT OF AGRICULTURE</a>
+          </li>
+
+          <li class="box"> <div>Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 		    title="Flaticon">www.flaticon.com</a> and are licensed by: <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank"><img class="cc" src="https://i.creativecommons.org/l/by/3.0/us/88x31.png"></a></div></li>
+          
+         
         </ul>
       </nav>
       </div>
@@ -32,7 +39,8 @@
         return {
             isActive: false,
             isOpen: false,
-            icon: 'info'
+            icon: 'info',
+            moveUp : false
         }
      },
      methods:{
@@ -41,14 +49,22 @@
                 this.isOpen = !this.isOpen;
                 if(this.icon === 'close'){
                   this.icon = 'info';
+                  this.moveUp = false;
                 }
                 else{
-                  this.icon = 'close';}
+                  this.icon = 'close';
+                  if(this.size){
+                    this.moveUp = true;
+                  }
+                  }
           }
          },
           computed: {
     size(){
       return this.$vuetify.breakpoint.xsOnly
+    },
+    medium(){
+      return this.$vuetify.breakpoint.smOnly
     }
           }
  }
@@ -165,7 +181,7 @@ h1 {
   nav {
     position: relative;
     height: 70%;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
     font-size: 40px;
     //font-family: 'Varela Round', serif;
@@ -178,7 +194,7 @@ h1 {
     margin: 0 auto;
     display: inline-block;
     position: relative;
-    height: 100%;
+    //height: 100%;
 
     li {
       display: block;
@@ -235,6 +251,26 @@ h1 {
 
 .small{
   font-size: 15px !important;
+}
+.med{
+  font-size: 30px !important;
+}
+.cc{
+  width: 150px;
+}
+.name{
+  font-family: 'Baloo Chettan', cursive;
+  font-weight: bold;
+}
+.box{
+  border: solid black 2px;
+  margin: 10%;
+}
+.padTop{
+  padding-top: 30px;
+}
+.mU{
+  top: 5px;
 }
 </style>
 
