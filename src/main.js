@@ -29,7 +29,7 @@ Vue.http.options.root = 'https://produce-6c2b0.firebaseio.com/'
 
 const routes = [
   //hack home defaults to winter:
-   { path: '', component: Winter },
+   { path: '/', component: Winter },
   { path: '/summer', component: Summer },
   { path: '/fall', component: Fall },
   { path: '/winter', component: Winter },
