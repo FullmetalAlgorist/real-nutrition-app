@@ -23,7 +23,6 @@ export default {
   methods: {
     outline(x){
       if (x==1){
-        console.log("NO");
         this.outline1 = true;
       }if (x==2){
         this.outline2 = true;
@@ -32,7 +31,6 @@ export default {
       }if (x==4){
         this.outline4 = true;
       }
-
      },
      showSummer(){
       this.$router.push('/summer');
@@ -89,6 +87,7 @@ export default {
 .out{
   border-color: black !important;
   background-color: red;
+  border-width: 4px;
 }
 .tin{
    margin-top: 10px;

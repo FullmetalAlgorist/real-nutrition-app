@@ -22,7 +22,7 @@
           <br>
 
           <li>What's in season now? brought to you by: <a class="padTop" href="https://snaped.fns.usda.gov/seasonal-produce-guide" title="Freepik">SNAP-Ed Connection:
-U.S. DEPARTMENT OF AGRICULTURE</a>
+U.S. Department of Agriculture</a>
           </li>
 
           <li class="box"> <div>Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 		    title="Flaticon">www.flaticon.com</a> and are licensed by: <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank"><img class="cc" src="https://i.creativecommons.org/l/by/3.0/us/88x31.png"></a></div></li>
@@ -84,8 +84,8 @@ $button-width: 29px;
 
 .overlay-menu{
   z-index: 20;
-   position: absolute;
-    font-family: 'Ubuntu', sans-serif;
+  position: absolute;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .container {
@@ -96,8 +96,6 @@ $button-width: 29px;
   top: 40%;
   left: 0;
   margin:  0 auto;
-
-
 
   p {
     font-size: 15px;
@@ -278,6 +276,7 @@ h1 {
 }
 .padTop{
   padding-top: 30px;
+  font-weight: bold;
 }
 .mU{
   top: 5px;

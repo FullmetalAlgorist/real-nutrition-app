@@ -85,6 +85,7 @@ html, body {
 }
 
 body {
+  font-family: 'Ubuntu', sans-serif;
   font-size: 250%;
 }
 </style>
