@@ -19,7 +19,7 @@
           <li >Built By:<a href="https://en.wikipedia.org/wiki/Mariah" title="Mariah"> <span class="name">Mariah Vicary</span></a></li>
           <!-- <li>Is this all? -where are my location options and such?</li>
           <li>YES this is all... it's just a stupid little app I made, get over it</li> -->
-          <br>
+          <br v-if="!height">
 
           <li>What's in season now? brought to you by: <a class="padTop" href="https://snaped.fns.usda.gov/seasonal-produce-guide" title="Freepik">SNAP-Ed Connection:
 U.S. Department of Agriculture</a>
@@ -272,10 +272,12 @@ h1 {
 }
 .box{
   border: solid black 2px;
-  margin: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
 }
 .padTop{
-  padding-top: 30px;
+  padding-top: 5%;
   font-weight: bold;
 }
 .mU{
