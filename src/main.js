@@ -16,6 +16,7 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 
 
+
 Vue.use(Grid);
 Vue.use(VueResource);
 Vue.use(VueRouter);
@@ -37,8 +38,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  routes,
-   mode: 'history'
+  routes
 })
 
 new Vue({

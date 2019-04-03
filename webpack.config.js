@@ -5,9 +5,9 @@ const GoogleFontsPlugin = require("google-fonts-webpack-plugin")
 module.exports = {
   entry: './src/main.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
-    filename: 'build.js'
+    path: __dirname,
+    publicPath: '/',
+    filename: 'bundle.js'
   },
   // plugins: [
   //   new GoogleFontsPlugin({
@@ -17,6 +17,12 @@ module.exports = {
   //     ]
   //   })
   // ],
+  //   plugins: [
+  //    new CopyWebpackPlugin([
+  //      { from: './index/html', to: 'relative/path/to/dest/' }
+  //    ])
+  //  ],
+  
   module: {
     rules: [
       {
@@ -114,4 +120,7 @@ if (process.env.NODE_ENV === 'production') {
       minimize: true
     })
   ])
+//   module.exports = {
+
+// }
 }
