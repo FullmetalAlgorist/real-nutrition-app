@@ -12,7 +12,7 @@
     </v-btn>
 </div>
     <div class="overlay" :class="{open: isOpen}" id="overlay">
-      <nav class="overlay-menu" :class="{small : size,  med : medium, short: height }">
+      <nav class="overlay-menu" :class="{short: height , small : size,  med : medium }">
         <h1>Welcome to the Nutrition App</h1>
         <h1>Information Page!!</h1>
         <ul>
@@ -20,7 +20,6 @@
           <!-- <li>Is this all? -where are my location options and such?</li>
           <li>YES this is all... it's just a stupid little app I made, get over it</li> -->
           <br v-if="!height">
-
           <li>What's in season now? brought to you by: <a class="padTop" href="https://snaped.fns.usda.gov/seasonal-produce-guide" title="Freepik">SNAP-Ed Connection:
 U.S. Department of Agriculture</a>
           </li>
@@ -67,7 +66,8 @@ U.S. Department of Agriculture</a>
       return this.$vuetify.breakpoint.smOnly
     },
     height(){
-      return this.$vuetify.breakpoint.height < 820
+
+      return (this.$vuetify.breakpoint.height < 740);
     }
           }
  }
@@ -284,7 +284,8 @@ h1 {
   top: 5px;
 }
 .short{
-  font-size: 20px !important;
+  //height: 75%;
+   font-size: 21px !important;
 }
 </style>
 
