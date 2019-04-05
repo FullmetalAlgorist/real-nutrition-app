@@ -1,7 +1,7 @@
 <template>
-<div class="ingredient">
+<div class="ingredient" :class="{xs: xs}" >
 
-<v-img  class="icon" :class="{xs: xs}"  :src="currentIcon" @mouseover="color" @mouseleave="color"></v-img>
+<v-img  class="icon" :src="currentIcon" @mouseover="color" @mouseleave="color"></v-img>
 <h6 :class="{fS: xs}">{{ name }}</h6>
 </div>
 
@@ -30,7 +30,10 @@ export default {
   },
   computed: {
     xs(){
-        return this.$vuetify.breakpoint.xsOnly;
+        return this.$vuetify.breakpoint.xsOnly ;
+    },
+    hR(){
+
     },
     name(){
       this.images = ['Apples','Apricots','Avocados','Asparagus','Bananas','Beets','Bell Peppers','Blackberries','Blueberries','Broccoli',
@@ -60,7 +63,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 .ingredient{
-height: 80px;
+//height: 80px;
+width: 15vh;
+margin: 10px;
 }
 .icon {
   /* padding: 10px; */
@@ -69,13 +74,14 @@ height: 80px;
   /* border: solid black;
 border-radius: 100%; */
 /* background-color: white; */
- margin: 10px;
+ margin-bottom: 10px;
 //padding: 10px;
   //width: 5em;
-width: 200px;
+width: 100%;
+
 }
 .xs{
-width: 70px;
+width: 70px !important;
 
 }
 h6{
@@ -89,5 +95,8 @@ h6{
 }
 .fS{
   font-size: 30%;
+}
+.heightResize{
+
 }
 </style>

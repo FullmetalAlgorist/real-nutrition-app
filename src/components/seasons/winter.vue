@@ -30,7 +30,7 @@ export default {
         return 80;
       }
       else{
-        return 220;
+        return this.$vuetify.breakpoint.height/5;
       }
 
     },
@@ -39,7 +39,8 @@ export default {
         return (120);
       }
       else{
-        return 275;
+        //console.log(this.$vuetify.breakpoint.height/4);
+        return this.$vuetify.breakpoint.height/4;
       }
     },
     ingredients(){
