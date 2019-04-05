@@ -75,7 +75,7 @@ export default {
       return (this.$route.path === '/spring' || this.hover4)
     },
     size(){
-        this.tiny = (this.$vuetify.breakpoint.width < 390);
+        this.tiny = (this.$vuetify.breakpoint.width < 380);
         this.wide = (this.$vuetify.breakpoint.width > 500)
       return true
       //this.$vuetify.breakpoint.xsOnly
@@ -97,6 +97,7 @@ export default {
   background-color: transparent;
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
+  padding-top: 10px;
 }
 .lg{
   height: 50px;
@@ -112,7 +113,8 @@ export default {
    left: -4px;
 }
 .widen{
-  margin: 0 2vw;
+  margin-left:  2vw;
+  margin-right: 2vw;
   width: 17vw !important;
 }
 </style>

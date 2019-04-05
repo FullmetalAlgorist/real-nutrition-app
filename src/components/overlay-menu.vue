@@ -12,7 +12,7 @@
     </v-btn>
 </div>
     <div class="overlay" :class="{open: isOpen}" id="overlay">
-      <nav class="overlay-menu" :class="{small : size,  med : medium, short: height }">
+      <nav class="overlay-menu" :class="{small : size,  med : medium, short: height , justMe: justMe}">
         <h1>Welcome to the Nutrition App</h1>
         <h1>Information Page!!</h1>
         <ul>
@@ -66,6 +66,10 @@ U.S. Department of Agriculture</a>
     },
     height(){
       return this.$vuetify.breakpoint.height < 820
+    },
+    justMe(){
+      // console.log(this.$vuetify.breakpoint.height);
+      return (this.$vuetify.breakpoint.height === 731)
     }
           }
  }
@@ -250,7 +254,7 @@ h1 {
 }
 
 .xs{
-  top: 46px;
+  top: 55px;
   left: -5px;
 }
 
@@ -283,6 +287,9 @@ h1 {
 }
 .short{
   font-size: 22px !important;
+}
+.justMe{
+  margin-top: 30px;
 }
 </style>
 
