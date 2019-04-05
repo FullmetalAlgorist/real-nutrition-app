@@ -285,7 +285,7 @@ h1 {
 }
 .short{
   //height: 75%;
-   font-size: 21px !important;
+   font-size: 22px !important;
 }
 </style>
 

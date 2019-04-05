@@ -76,7 +76,7 @@ export default {
 }
 
 div{
-  font-weight: bold;
+  // font-weight: bold;
 }
 
 html, body {
@@ -86,6 +86,7 @@ html, body {
 
 body {
   font-family: 'Ubuntu', sans-serif;
-  font-size: 250%;
+  font-size: 300%;
+  font-weight: bold;
 }
 </style>

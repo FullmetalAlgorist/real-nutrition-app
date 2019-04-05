@@ -7,7 +7,7 @@
       :cellHeight="cellHeight"
       class="grid"
       :center = "cent"
-      > 
+      >
         <template slot="cell" slot-scope="props">
           <ingredient :specific="props.item"></ingredient>
         </template>
