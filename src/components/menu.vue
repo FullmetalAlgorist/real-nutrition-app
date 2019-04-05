@@ -1,10 +1,10 @@
 <template>
   <div class="menu">
-    <v-btn large v-on:mouseover="hover1 = true" @mouseleave="falsee" :outline="!outline1" :class="{ lg : size, out : !outline1 }" class="warning" @click="showSummer">Summer</v-btn>
-    <v-btn large v-on:mouseover="hover2 = true" @mouseleave="falsee" :outline="!outline2" :class="{ lg : size, out : !outline2} " class="error" @click="showFall">Fall</v-btn>
+    <v-btn large v-on:mouseover="hover1 = true" @mouseleave="falsee" :outline="!outline1" :class="{ lg : size, out : !outline1, widen: wide }" class="warning" @click="showSummer">Summer</v-btn>
+    <v-btn large v-on:mouseover="hover2 = true" @mouseleave="falsee" :outline="!outline2" :class="{ lg : size, out : !outline2, widen: wide } " class="error" @click="showFall">Fall</v-btn>
     <br v-if="tiny">
-    <v-btn large v-on:mouseover="hover3 = true" @mouseleave="falsee" :outline="!outline3" :class="{ lg : size, out : !outline3, tin: tiny }" class="info" @click="showWinter">Winter</v-btn>
-    <v-btn large v-on:mouseover="hover4 = true" @mouseleave="falsee" :outline="!outline4" :class="{ lg : size, out : !outline4, tin: tiny}" class="success" @click="showSpring">Spring</v-btn>
+    <v-btn large v-on:mouseover="hover3 = true" @mouseleave="falsee" :outline="!outline3" :class="{ lg : size, out : !outline3, tin: tiny, widen: wide }" class="info" @click="showWinter">Winter</v-btn>
+    <v-btn large v-on:mouseover="hover4 = true" @mouseleave="falsee" :outline="!outline4" :class="{ lg : size, out : !outline4, tin: tiny, widen: wide }" class="success" @click="showSpring">Spring</v-btn>
   </div>
 </template>
 
@@ -17,11 +17,12 @@ export default {
         hover2 : false,
         hover3 : false,
         hover4 : false,
-        tiny : false
+        tiny : false,
+        wide : false
     }
   },
   methods: {
-    outline(x, f){
+    outline(x){
       if (x==1){
         this.outline1 = true;
       }if (x==2){
@@ -74,13 +75,10 @@ export default {
       return (this.$route.path === '/spring' || this.hover4)
     },
     size(){
-      if(this.$vuetify.breakpoint.width < 390){
-        this.tiny = true;
-      }
-      else{
-        this.tiny = false;
-      }
-      return this.$vuetify.breakpoint.xsOnly
+        this.tiny = (this.$vuetify.breakpoint.width < 390);
+        this.wide = (this.$vuetify.breakpoint.width > 500)
+      return true
+      //this.$vuetify.breakpoint.xsOnly
     },
     imageHeight () {
       switch (this.$vuetify.breakpoint.name) {
@@ -95,7 +93,6 @@ export default {
 }
 </script>
 <style scoped>
-
 .menu{
   background-color: transparent;
   text-align: center;
@@ -108,11 +105,14 @@ export default {
 }
 .out{
   border-color: black !important;
-  background-color: red;
   border-width: 4px;
 }
 .tin{
    margin-top: 10px;
    left: -4px;
+}
+.widen{
+  margin: 0 2vw;
+  width: 17vw !important;
 }
 </style>

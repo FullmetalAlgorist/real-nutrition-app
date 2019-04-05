@@ -62,11 +62,11 @@ export default {
   // background: linear-gradient(to right, #136a8a, #267871); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
-// background: #F09819;  /* fallback for old browsers */
-// background: -webkit-linear-gradient(to bottom right, #EDDE5D, #F09819);  /* Chrome 10-25, Safari 5.1-6 */
-// background: linear-gradient(to bottom right, #EDDE5D, #F09819); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-//  height: 100%;
-background-color: red;
+ background: #F09819;  /* fallback for old browsers */
+ background: -webkit-linear-gradient(to bottom right, #EDDE5D, #F09819);  /* Chrome 10-25, Safari 5.1-6 */
+ background: linear-gradient(to bottom right, #EDDE5D, #F09819); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100%;
+
 }
 .grid{
    margin-top: 12px;
