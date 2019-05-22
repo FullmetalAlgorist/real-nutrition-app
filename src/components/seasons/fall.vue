@@ -55,8 +55,9 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .fall{
+
   background: #333333;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom
   right, #dd1818, #333333);  /* Chrome 10-25, Safari 5.1-6 */
