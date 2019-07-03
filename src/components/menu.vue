@@ -63,13 +63,13 @@ export default {
   },
   computed: {
     outline1(){
-      return (this.$route.path === '/summer' || this.hover1)
+      return (this.$route.path === '/summer' || this.$route.path === '/' || this.hover1)
       },
     outline2(){
     return (this.$route.path === '/fall' || this.hover2)
     },
     outline3(){
-      return (this.$route.path === '/winter' || this.$route.path === '/' || this.hover3)
+      return (this.$route.path === '/winter'  || this.hover3)
     },
     outline4(){
       return (this.$route.path === '/spring' || this.hover4)
