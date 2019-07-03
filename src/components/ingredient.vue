@@ -5,15 +5,19 @@
 <h6 :class="{fS: xs}">{{ name }}</h6>
  <v-dialog
       v-model="dialog"
-      width="150"
-    
+      width= "28vw"
+      
     >
-      <v-card class="modalMe" >
-        <v-card-title class="headline">Facts!!</v-card-title>
-
+      <v-card class="modalMe" v-bind:style="{ backgroundImage: 'url(' + linedIcon + ')' }">
+        <v-card-title class="headline headliner">Facts about {{ name }}!</v-card-title>
         <v-card-text>
-          Food Grade: A+
-          Calories per serving: 100 +/- 
+          1.  They are so yummy!
+          <br>
+          2. Food Grade: A+
+          <br>
+          3. Calories: 100
+          <br>
+          4. Last line of  facts
         </v-card-text>
 
         <!-- <v-card-actions>
@@ -105,15 +109,7 @@ width: 15vh;
 margin: 10px;
 }
 .icon {
-  /* padding: 10px; */
-
-  // height: 180px;
-  /* border: solid black;
-border-radius: 100%; */
-/* background-color: white; */
  margin-bottom: 10px;
-//padding: 10px;
-  //width: 5em;
 width: 100%;
 
 }
@@ -122,11 +118,9 @@ width: 70px !important;
 
 }
 h6{
-  /* display: none; */
    font-weight: bold;
    font-family: 'Ubuntu', sans-serif;
    text-align: center;
-   
    margin: 0;
 
 }
@@ -135,5 +129,20 @@ h6{
 }
 .modalMe{
   font-size: 14px !important;
+  font-weight: bold;
+  text-align: center;
+  border: 3px solid black;
+ background-color: rgba(201, 201, 201, 0.8);
+ background-size: cover;
+ background-blend-mode: screen; //screen //lighten //overlay //
+}
+.headliner{
+  text-align: center;
+  display:inline-flex;
+  padding-bottom: 0;
+  font-weight: bold;
+}
+.dial{
+ font-weight: bold;
 }
 </style>
