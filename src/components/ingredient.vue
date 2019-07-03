@@ -1,7 +1,7 @@
 <template>
 <div class="ingredient" :class="{xs: xs}" >
 
-<v-img  class="icon" :src="currentIcon" @mouseover="color" @mouseleave="color"></v-img>
+<v-img  class="icon" :src="currentIcon" @click="modalMe" @mouseover="color" @mouseleave="color"></v-img>
 <h6 :class="{fS: xs}">{{ name }}</h6>
  <v-dialog
       v-model="dialog"
@@ -54,12 +54,13 @@ export default {
     color(){
       if (this.currentIcon == this.icon){
           this.currentIcon = this.linedIcon;
-          console.log('dialog');
-          this.dialog = true;
       }else{
           this.currentIcon = this.icon;
-          this.dialog = false;
       }
+    },
+    modalMe(){
+        console.log('dialog');
+          this.dialog = true;
     }
   },
   computed: {
