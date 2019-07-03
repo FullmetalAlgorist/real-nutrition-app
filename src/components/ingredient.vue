@@ -3,8 +3,40 @@
 
 <v-img  class="icon" :src="currentIcon" @mouseover="color" @mouseleave="color"></v-img>
 <h6 :class="{fS: xs}">{{ name }}</h6>
-</div>
+ <v-dialog
+      v-model="dialog"
+      max-width="500"
+    >
+      <v-card>
+        <v-card-title class="headline">Use Google's location service?</v-card-title>
 
+        <v-card-text>
+          Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.
+        </v-card-text>
+
+        <!-- <v-card-actions>
+          <v-spacer></v-spacer>
+
+          <v-btn
+            color="green darken-1"
+            flat="flat"
+            @click="dialog = false"
+          >
+            Disagree
+          </v-btn>
+
+          <v-btn
+            color="green darken-1"
+            flat="flat"
+            @click="dialog = false"
+          >
+            Agree
+          </v-btn>
+        </v-card-actions> -->
+      </v-card>
+    </v-dialog>
+
+</div>
 </template>
 <script>
 export default {
@@ -14,17 +46,19 @@ export default {
       images : [],
       currentIcon: 'src/assets/graphics/produce/genericColor.png',
      icon: 'src/assets/graphics/produce/genericColor.png',
-     linedIcon: 'src/assets/graphics/produce/generic.png'
+     linedIcon: 'src/assets/graphics/produce/generic.png',
+    dialog: false
     }
   },
   methods : {
     color(){
       if (this.currentIcon == this.icon){
           this.currentIcon = this.linedIcon;
-
-
+          console.log('dialog');
+          this.dialog = true;
       }else{
           this.currentIcon = this.icon;
+          this.dialog = false;
       }
     }
   },
