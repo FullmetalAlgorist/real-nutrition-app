@@ -5,13 +5,15 @@
 <h6 :class="{fS: xs}">{{ name }}</h6>
  <v-dialog
       v-model="dialog"
-      max-width="500"
+      width="150"
+    
     >
-      <v-card>
-        <v-card-title class="headline">Use Google's location service?</v-card-title>
+      <v-card class="modalMe" >
+        <v-card-title class="headline">Facts!!</v-card-title>
 
         <v-card-text>
-          Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.
+          Food Grade: A+
+          Calories per serving: 100 +/- 
         </v-card-text>
 
         <!-- <v-card-actions>
@@ -131,7 +133,7 @@ h6{
 .fS{
   font-size: 30%;
 }
-.heightResize{
-
+.modalMe{
+  font-size: 14px !important;
 }
 </style>
