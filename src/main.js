@@ -15,8 +15,6 @@ import Grid from 'vue-js-grid'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 
-
-
 Vue.use(Grid);
 Vue.use(VueResource);
 Vue.use(VueRouter);
