@@ -16,7 +16,7 @@
         <h1>Welcome to the Nutrition App</h1>
         <h1>Information Page!!</h1>
         <ul>
-          <li >Built By:<a href="https://en.wikipedia.org/wiki/Mariah" title="Mariah"> <span class="name">Mariah Vicary</span></a></li>
+          <li >Built By:<a href="https://mariah-vue-portfolio.herokuapp.com/" title="Mariah"> <span class="name">Mariah Vicary</span></a></li>
           <!-- <li>Is this all? -where are my location options and such?</li>
           <li>YES this is all... it's just a stupid little app I made, get over it</li> -->
           <br v-if="!height">
