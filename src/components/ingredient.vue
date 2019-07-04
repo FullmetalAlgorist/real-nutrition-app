@@ -63,7 +63,7 @@ export default {
       currentIcon: 'src/assets/graphics/produce/genericColor.png',
      icon: 'src/assets/graphics/produce/genericColor.png',
      linedIcon: 'src/assets/graphics/produce/generic.png',
-     nutrition: 'src/assets/graphics/nutrition/apple.png',
+     nutrition: 'src/assets/graphics/nutrition/appleNutrition.png',
     dialog: false
     }
   },
