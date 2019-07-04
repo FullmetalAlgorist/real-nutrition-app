@@ -51,3 +51,6 @@
           this.$http.put('data.json', data);
     }
 
+
+
+"generalSearchInput":"raw +broccoli"

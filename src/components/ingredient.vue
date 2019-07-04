@@ -8,17 +8,27 @@
       width= "28vh"
       
     >
-      <v-card class="modalMe" v-bind:style="{ backgroundImage: 'url(' + linedIcon + ')' }">
-        <v-card-title class="headline headliner">Facts about {{ name }}!</v-card-title>
+
+ <!-- v-bind:style="{ backgroundImage: 'url(' + linedIcon + ')' }" 
+ v-bind:style="{ backgroundImage: 'url(' + nutrition + ')' }"
+ -->
+      <v-card class="modalMe" >
+         <v-img
+          class="white--text"
+         
+          :src="nutrition"
+        >
+         </v-img>
+        <!-- <v-card-title class="headline headliner">Facts about {{ name }}!</v-card-title>
         <v-card-text>
-          1.  They are so yummy!
+           They have: 95 Calories,
           <br>
-          2. Food Grade: A+
+          19g of Sugar,
           <br>
-          3. Calories: 100
+         and 4g of Dietary Fiber
           <br>
-          4. Last line of  facts
-        </v-card-text>
+          per 182g serving.
+        </v-card-text> -->
 
         <!-- <v-card-actions>
           <v-spacer></v-spacer>
@@ -53,6 +63,7 @@ export default {
       currentIcon: 'src/assets/graphics/produce/genericColor.png',
      icon: 'src/assets/graphics/produce/genericColor.png',
      linedIcon: 'src/assets/graphics/produce/generic.png',
+     nutrition: 'src/assets/graphics/nutrition/apple.png',
     dialog: false
     }
   },
@@ -65,7 +76,7 @@ export default {
       }
     },
     modalMe(){
-        console.log('dialog');
+        
           this.dialog = true;
     }
   },
@@ -111,7 +122,6 @@ margin: 10px;
 .icon {
  margin-bottom: 10px;
 width: 100%;
-
 }
 .xs{
 width: 70px !important;
@@ -122,7 +132,6 @@ h6{
    font-family: 'Ubuntu', sans-serif;
    text-align: center;
    margin: 0;
-
 }
 .fS{
   font-size: 30%;

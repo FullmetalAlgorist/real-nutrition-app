@@ -24,3 +24,15 @@ write info for app in general
 source info for modal, nutrients -- I think I have things bookmarked
 
 get todos off readme because EVERYONE can read them (hi!)
+
+calories per serving
+dietary fiber per serving 
+sugar...
+Richin: ??
+
+pieces of info: 
+   -Calories
+-g of Sugar
+-g of Dietary Fiber per
+-g serving OR -cup serving
+                 (space)
