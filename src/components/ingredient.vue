@@ -5,7 +5,7 @@
 <h6 :class="{fS: xs}">{{ name }}</h6>
  <v-dialog
       v-model="dialog"
-      width= "28vh"
+      width= "60vh"
       
     >
 
