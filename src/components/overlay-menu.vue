@@ -14,18 +14,17 @@
     <div class="overlay" :class="{open: isOpen}" id="overlay">
       <nav class="overlay-menu" :class="{small : size,  med : medium, short: height , justMe: justMe}">
         <h1>Welcome to the Nutrition App</h1>
-        <h1>Information Page!!</h1>
+        <h1>Information Page!</h1>
         <ul>
           <li >Built By:<a href="https://mariah-vue-portfolio.herokuapp.com/" title="Mariah"> <span class="name">Mariah Vicary</span></a></li>
           <!-- <li>Is this all? -where are my location options and such?</li>
           <li>YES this is all... it's just a stupid little app I made, get over it</li> -->
           <br v-if="!height">
-
-          <li>What's in season now? brought to you by: <a class="padTop" href="https://snaped.fns.usda.gov/seasonal-produce-guide" title="Freepik">SNAP-Ed Connection:
+          <li>Seasonal produce lists & nutrition facts, brought to you by: <a class="padTop" href="https://snaped.fns.usda.gov/seasonal-produce-guide" title="Freepik">SNAP-Ed Connection:
 U.S. Department of Agriculture</a>
           </li>
 
-          <li class="box"> <div>Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 		    title="Flaticon">www.flaticon.com</a> and are licensed by: <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank"><img class="cc" src="https://i.creativecommons.org/l/by/3.0/us/88x31.png"></a></div></li>
+          <li class="box"> <div>Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 		    title="Flaticon">www.flaticon.com</a> and are licensed by: <a class="pt-1" href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank"><img class="cc" src="https://i.creativecommons.org/l/by/3.0/us/88x31.png"></a></div></li>
         </ul>
       </nav>
       </div>
