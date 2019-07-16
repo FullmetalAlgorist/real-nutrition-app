@@ -141,7 +141,7 @@ h1 {
 }
 
 .button_container {
-  top: 2px;
+  top: 3px;
    position: fixed;
   cursor: pointer;
   z-index: 2 ;

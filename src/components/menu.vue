@@ -1,6 +1,6 @@
 <template>
   <div class="menu">
-<v-toolbar class="mb-2" height="48px" color="rgba(255, 255, 255, 0.3)">
+<v-toolbar class="mb-2" height="50px" color="rgba(255, 255, 255, 0.3)">
     <!-- <v-toolbar-side-icon></v-toolbar-side-icon> -->
     <v-spacer></v-spacer>
     <v-toolbar-title class="health">HealthyHarvest</v-toolbar-title>
