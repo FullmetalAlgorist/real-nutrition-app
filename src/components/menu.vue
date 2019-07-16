@@ -1,6 +1,6 @@
 <template>
   <div class="menu">
-<v-toolbar color="rgba(255, 255, 255, 0.3)" text-xs-center>
+<v-toolbar class="mb-2" height="48px" color="rgba(255, 255, 255, 0.3)">
     <!-- <v-toolbar-side-icon></v-toolbar-side-icon> -->
     <v-spacer></v-spacer>
     <v-toolbar-title class="health">HealthyHarvest</v-toolbar-title>
@@ -13,11 +13,46 @@
     </v-toolbar-items> -->
   </v-toolbar>
 
-    <v-btn large v-on:mouseover="hover1 = true" @mouseleave="falsee" :outline="!outline1" :class="{ lg : size, out : !outline1, widen: wide }" class="warning" @click="showSummer">Summer</v-btn>
-    <v-btn large v-on:mouseover="hover2 = true" @mouseleave="falsee" :outline="!outline2" :class="{ lg : size, out : !outline2, widen: wide } " class="error" @click="showFall">Fall</v-btn>
+    <v-btn 
+      large 
+      v-on:mouseover="hover1 = true" 
+      @mouseleave="falsee" 
+      :outline="!outline1" 
+      :class="{ lg : size, out : !outline1, widen: wide }" 
+      class="warning elevation-25" 
+      @click="showSummer"
+      >
+      Summer
+    </v-btn>
+    <v-btn 
+      large 
+      v-on:mouseover="hover2 = true" 
+      @mouseleave="falsee" 
+      :outline="!outline2" 
+      :class="{ lg : size, out : !outline2, widen: wide }" 
+      class="error" @click="showFall">
+      Fall
+    </v-btn>
     <br v-if="tiny">
-    <v-btn large v-on:mouseover="hover3 = true" @mouseleave="falsee" :outline="!outline3" :class="{ lg : size, out : !outline3, tin: tiny, widen: wide }" class="info" @click="showWinter">Winter</v-btn>
-    <v-btn large v-on:mouseover="hover4 = true" @mouseleave="falsee" :outline="!outline4" :class="{ lg : size, out : !outline4, tin: tiny, widen: wide }" class="success" @click="showSpring">Spring</v-btn>
+    <v-btn 
+      large 
+      v-on:mouseover="hover3 = true" 
+      @mouseleave="falsee" 
+      :outline="!outline3" 
+      :class="{ lg : size, out : !outline3, tin: tiny, widen: wide }" 
+      class="info" @click="showWinter">
+      Winter
+    </v-btn>
+    <v-btn 
+      large 
+      v-on:mouseover="hover4 = true" 
+      @mouseleave="falsee" 
+      :outline="!outline4" 
+      :class="{ lg : size, out : !outline4, tin: tiny, widen: wide }" 
+      class="success" 
+      @click="showSpring">
+      Spring
+    </v-btn>
   </div>
 </template>
 

@@ -13,8 +13,9 @@
 </div>
     <div class="overlay" :class="{open: isOpen}" id="overlay">
       <nav class="overlay-menu" :class="{small : size,  med : medium, short: height , justMe: justMe}">
-        <h1>Welcome to the Nutrition App</h1>
-        <h1>Information Page!</h1>
+        <h1>Welcome to the</h1>
+        <h1 class="health">HealthyHarvest</h1>
+        <h1>Nutrition App Information Page!</h1>
         <ul>
           <li >Built By:<a href="https://en.wikipedia.org/wiki/Vin_Diesel" title="Mariah"> <span class="name">Mariah Vicary</span></a></li>
           <!-- <li>Is this all? -where are my location options and such?</li>
@@ -140,7 +141,7 @@ h1 {
 }
 
 .button_container {
-  top: 5px;
+  top: 2px;
    position: fixed;
   cursor: pointer;
   z-index: 2 ;
@@ -290,6 +291,10 @@ h1 {
 }
 .justMe{
   margin-top: 30px;
+}
+.health{
+  font-family: 'Barriecito', cursive;
+ font-size: 200%;
 }
 </style>
 
