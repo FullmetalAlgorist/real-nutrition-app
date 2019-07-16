@@ -140,6 +140,7 @@ h1 {
 }
 
 .button_container {
+  top: 5px;
    position: fixed;
   cursor: pointer;
   z-index: 2 ;
@@ -253,7 +254,7 @@ h1 {
 }
 
 .xs{
-  top: 55px;
+  // top: 55px;
   left: -5px;
 }
 

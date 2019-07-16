@@ -1,5 +1,18 @@
 <template>
   <div class="menu">
+<v-toolbar color="rgba(255, 255, 255, 0.3)" text-xs-center>
+    <!-- <v-toolbar-side-icon></v-toolbar-side-icon> -->
+    <v-spacer></v-spacer>
+    <v-toolbar-title class="health">HealthyHarvest</v-toolbar-title>
+   <v-spacer></v-spacer>
+    <!-- <v-spacer></v-spacer>
+    <v-toolbar-items class="hidden-sm-and-down">
+      <v-btn flat>Link One</v-btn>
+      <v-btn flat>Link Two</v-btn>
+      <v-btn flat>Link Three</v-btn>
+    </v-toolbar-items> -->
+  </v-toolbar>
+
     <v-btn large v-on:mouseover="hover1 = true" @mouseleave="falsee" :outline="!outline1" :class="{ lg : size, out : !outline1, widen: wide }" class="warning" @click="showSummer">Summer</v-btn>
     <v-btn large v-on:mouseover="hover2 = true" @mouseleave="falsee" :outline="!outline2" :class="{ lg : size, out : !outline2, widen: wide } " class="error" @click="showFall">Fall</v-btn>
     <br v-if="tiny">
@@ -116,5 +129,9 @@ export default {
   margin-left:  2vw;
   margin-right: 2vw;
   width: 17vw !important;
+}
+.health{
+  font-family: 'Barriecito', cursive;
+ font-size: 120%;
 }
 </style>
